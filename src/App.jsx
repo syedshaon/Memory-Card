@@ -270,6 +270,9 @@ function App() {
           })}
         </ul>
       </section>
+      <a href="https://github.com/syedshaon/Memory-Card" target="_blank" title="GitHub Repo Link" className="git-hub">
+        GitHub Repo Link
+      </a>
     </>
   );
 }

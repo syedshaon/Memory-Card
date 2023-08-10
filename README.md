@@ -1,6 +1,14 @@
-#  React + Vite + Bootstrap
+# Memorizing Card Game
 
+Done following The Oding Project -> https://www.theodinproject.com/lessons/node-path-react-new-memory-card
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Live site Link: https://memorize-cards.onrender.com/
 
- 
+Tools Used:
+
+- React
+- SCSS
+- Lodash
+- UseEffects, UseState
+- Fetch API
+- https://www.deckofcardsapi.com/
