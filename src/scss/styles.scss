@@ -1,2 +1,171 @@
-// Import all of Bootstrap's CSS
-@import "~bootstrap/scss/bootstrap";
+@import "./reset";
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background-image: url(../assets/amanda-jones.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+  main {
+    width: 100%;
+  }
+}
+
+header {
+  margin: 3rem auto;
+  width: 100%;
+  max-width: 1100px;
+  padding: 20px;
+  .top {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 300px;
+
+    .score {
+      display: none;
+      // display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      margin-left: auto;
+    }
+  }
+  .play {
+    .top {
+      justify-content: space-between;
+      margin-bottom: 0px;
+    }
+    // .score {
+    //   display: block;
+    //   flex-direction: column;
+    //   align-items: flex-end;
+    // }
+  }
+  h1.title {
+    font-size: 3rem;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  nav {
+    // display: none;
+    // margin: 300px 0 30px;
+    display: flex;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    h2.nav-title {
+      //   margin-right: auto;
+      font-size: 2rem;
+    }
+  }
+}
+
+.gOn .top {
+  margin-bottom: 0;
+}
+.over {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  &-title {
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .score {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+button.btn {
+  cursor: pointer;
+  background-color: #187ff5;
+  padding: 8px 30px;
+  margin: 10px;
+  box-shadow: 0px 0px 5px 5px #0c410749;
+  color: #fff;
+  font-weight: 700;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border: 1px solid #187ff5;
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: #fff;
+    color: #187ff5;
+    transition: all 0.2s;
+  }
+}
+
+.board {
+  margin: 3rem auto;
+  width: 100%;
+  max-width: 1100px;
+  padding: 20px;
+  ul.items {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    flex: 0 1 1;
+    li {
+      cursor: pointer;
+
+      transition: all 0.2s;
+      border-radius: 5px;
+      &:hover,
+      &:focus,
+      &:active {
+        box-shadow: 0px 0px 5px 5px #187ff5;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  body {
+    align-items: flex-start;
+  }
+  .board {
+    position: relative;
+    margin-top: 0;
+  }
+
+  .items {
+    position: absolute;
+    min-width: 800px;
+    top: -200px;
+    left: -200px;
+    scale: 0.5;
+  }
+  .easy .items,
+  .medium .items {
+    top: -100px;
+  }
+  header {
+    h1.title {
+      font-size: 2rem;
+    }
+    margin: 0 auto;
+    .top {
+      display: block;
+      text-align: center;
+      .score {
+        align-items: center;
+      }
+    }
+  }
+  nav {
+    flex-direction: column;
+  }
+}
